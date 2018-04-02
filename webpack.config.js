@@ -28,9 +28,15 @@ var config = {
                 query: {
                     presets: ["react", "es2015", "stage-2"]
                 }
-            }
+            },
+            {
+                test: /\.css$/,
+                include: SRC_DIR,
+                use: ['style-loader', 'css-loader'],
+              }
         ]
-    }
+    },
+    devtool: "source-map"
 };
 
 module.exports = config;
