@@ -9,6 +9,7 @@
   background-repeat: no-repeat;
   background-size: 40px;
   background-position: left;
+ 
 }
 
 .menuContainer {
@@ -18,6 +19,10 @@
   background-color: #fafafa;
   flex-direction: row;
   justify-content: space-between;
+}
+
+.menuContainer:focus {
+  background-color: antiquewhite;
 }
 
 .categoryButton {
@@ -49,6 +54,7 @@
   opacity:.5!important;
 }
 .item-button {
+  transition-duration: 1000ms;
   border-color: white;
   background-color: rgb(71, 68, 68);
   color: white; 
@@ -72,6 +78,7 @@
   grid-template-columns: auto 1fr 1fr 1fr 1fr; 
   position: absolute;
   top: 110px;
+  transition: opacity 300ms ease-in-out 1s;
 }
 
 .display-items button:nth-child(odd) {

@@ -16,6 +16,7 @@ class App extends React.Component {
       mainData: [],
       beverageData: [],
       extraFoodData: [],
+      changeBackgroundColor: false
     }
   }
 
@@ -52,9 +53,11 @@ class App extends React.Component {
     } else if(this.state.display) {
       this.setState({display: false});
     }
+
   }
 
   handleMenuCategoryClick(e) {
+    
     if(e.currentTarget.value === 'Appetizer' && !this.state.appetizersDisplay) {
       this.setState({appetizersDisplay: true, mainsDisplay: false});
     } else if(this.state.appetizersDisplay) {
